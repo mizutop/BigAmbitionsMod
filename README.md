@@ -3,7 +3,7 @@
 Big Ambitions (Hovgaard Games) 的 MelonLoader Mod —  雄心壮志1.0版本内置修改模组，按 **F8** 打开。
 
 ![menu screenshot](pic/1.png)
-
+![menu screenshot](pic/2.png)
 ## 安装方法
 
 ### 1. 安装 MelonLoader
