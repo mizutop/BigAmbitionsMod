@@ -1,6 +1,6 @@
 # ItzRealOzone Trainer — Big Ambitions 多功能修改器
 
-Big Ambitions (Hovgaard Games) 的 MelonLoader Mod — 游戏内修改面板，按 **F8** 打开。
+Big Ambitions (Hovgaard Games) 的 MelonLoader Mod —  雄心壮志1.0版本内置修改模组，按 **F8** 打开。
 
 ![menu screenshot](pic/1.png)
 
