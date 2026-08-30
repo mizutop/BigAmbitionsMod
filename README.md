@@ -2,7 +2,7 @@
 
 Big Ambitions (Hovgaard Games) 的 MelonLoader Mod — 游戏内修改面板，按 **F8** 打开。
 
-由原项目 **ItzRealOzone Trainer v1.0.1**（IL2CPP）针对 **当前 Mono 版游戏** 全新重写，作者 **Mizuof**。
+![menu screenshot](pic/1.png)
 
 ## 安装方法
 
@@ -106,6 +106,6 @@ dotnet build -c Release
 ---
 
 **作者**: Mizuof  
-**GitHub**: https://github.com/Mizuof (BigAmbitionsTrainer)
+**GitHub**: https://github.com/Mizuof 
 
 *本修改器完全免费，请勿用于商业用途。*
