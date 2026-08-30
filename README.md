@@ -57,11 +57,7 @@ Steam 库 → 右键 **Big Ambitions** → 管理 → 浏览本地文件。
 
 ## 界面定制
 
-- **语言**：全部文案中英双语词典化（`Loc`），默认中文，设置 Tab 一键切换，立即生效并持久化。
-- **主题**：默认「蓝科技」深蓝配色。
-- **颜色自定义**：13 个控件区域（窗口/边框/页签/控件/按钮/主强调/成功/危险/警示/文字/分区/输入框边框）均提供 **R/G/B 三路滑条**，拖动实时预览、松手自动保存。
-- **布局**：面板不透明度 (0.3~1.0)、界面缩放 (0.6~1.8x，`GUI.matrix` 整体缩放)。
-- **拖拽与记忆**：标题栏可拖动，位置持久化；关闭时记录当前 Tab，重开还原；每个 Tab 独立记忆滚动位置。
+- **语言**：全部文案中英双语词典化（`Loc`）
 
 ## 游戏技术栈
 
@@ -86,7 +82,7 @@ dotnet build -c Release
 
 | 文件 | 功能 |
 |------|------|
-| `ItzRealOzoneBATrainerMod.cs` | 主入口 + F8 调色 + 30 帧冷却轮询 + MIZUOF banner |
+| `ItzRealOzoneBATrainerMod.cs` | 主入口 + F8 调色 + MIZUOF banner |
 | `BigAmbitionsTrainer.UI\TrainerOverlay.cs` | F8 悬浮面板 (8 Tab)，拖动/缩放/透明度/主题 |
 | `BigAmbitionsTrainer.UI\TrainerTheme.cs` | 蓝科技主题 + 13 项控件颜色自定义 |
 | `BigAmbitionsTrainer.UI\ToastNotification.cs` | IMGUI Toast 提示 |
