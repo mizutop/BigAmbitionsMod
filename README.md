@@ -17,7 +17,7 @@ Big Ambitions (Hovgaard Games) 的 MelonLoader Mod —  雄心壮志1.0版本内
 打开 MelonLoader.Installer，按以下步骤操作：
 
 1. 在列表中找到 **Big Ambitions**（或手动选择游戏 exe）
-2. **Install**（项目开发环境为 **v0.7.x**，Mono net35 运行时）
+2. **Install**（项目开发环境为 **v0.7.2**，Mono net35 运行时）
 3. 安装完成后，**运行一次游戏**，务必进入游戏主界面再退出（首次运行会生成必要文件）
 4. 游戏根目录出现 `MelonLoader/` 和 `Mods/` 文件夹即安装成功
 
