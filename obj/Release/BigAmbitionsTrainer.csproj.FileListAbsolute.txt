@@ -1,0 +1,8 @@
+D:\MyPoject\0830\obj\Release\BigAmbitionsTrainer.csproj.AssemblyReference.cache
+D:\MyPoject\0830\obj\Release\BigAmbitionsTrainer.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyPoject\0830\obj\Release\BigAmbitionsTrainer.csproj.CoreCompileInputs.cache
+D:\MyPoject\0830\bin\Release\ItzRealOzoneBATrainer.deps.json
+D:\MyPoject\0830\bin\Release\ItzRealOzoneBATrainer.dll
+D:\MyPoject\0830\bin\Release\ItzRealOzoneBATrainer.pdb
+D:\MyPoject\0830\obj\Release\ItzRealOzoneBATrainer.dll
+D:\MyPoject\0830\obj\Release\ItzRealOzoneBATrainer.pdb

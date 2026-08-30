@@ -1,0 +1,92 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    ItzRealOzone Trainer — Mono (net35) 重写版
+    目标运行时: Big Ambitions (Unity 2022.3.62f2, MonoBleedingEdge, MelonLoader net35)
+    原项目为 IL2CPP net6 版，完全不适用于 Mono 游戏，故全新重写。
+  -->
+
+  <PropertyGroup>
+    <AssemblyName>ItzRealOzoneBATrainer</AssemblyName>
+    <RootNamespace>BigAmbitionsTrainer</RootNamespace>
+    <!--
+      目标框架说明：
+      游戏 Big Ambitions (Unity 2022.3, MonoBleedingEdge) 的脚本以 netstandard2.0 编译，
+      BigAmbitions.dll 依赖 System.Runtime 4.0 / netstandard 类型。
+      netstandard2.0 是 MelonLoader 官方推荐、且与游戏引用兼容的方案。
+      旧项目误用 IL2CPP net6 + Il2CppAssemblies，完全不适用当前 Mono 游戏。
+      （UnityEngine.CoreModule 使用 netstandard2.1，故目标框架升级为 netstandard2.1）
+    -->
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>10.0</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+    <Deterministic>false</Deterministic>
+    <!-- 默认编译项排除反编译参考源码目录与旧版备份，避免被当作项目源文件编译 -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);1.0版本bigAmbitions反编译文件\**;1.0版本bigAmbitions反编译文件\**\**;_legacy_il2cpp_backup\**;_legacy_il2cpp_backup\**\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <!-- 游戏目录前缀：实际游戏路径。请按需修改为你的 Big Ambitions 安装根目录 -->
+  <PropertyGroup>
+    <GameDir>D:\SteamLibrary\steamapps\common\Big Ambitions</GameDir>
+  </PropertyGroup>
+
+  <!-- MelonLoader net35 运行时 -->
+  <ItemGroup>
+    <Reference Include="MelonLoader">
+      <HintPath>$(GameDir)\MelonLoader\net35\MelonLoader.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(GameDir)\MelonLoader\net35\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- 游戏 Mono 程序集（Managed 目录，真程序集而非 Il2CppAssemblies） -->
+  <ItemGroup>
+    <Reference Include="BigAmbitions">
+      <HintPath>$(GameDir)\Big Ambitions_Data\Managed\BigAmbitions.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(GameDir)\Big Ambitions_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameDir)\Big Ambitions_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(GameDir)\Big Ambitions_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(GameDir)\Big Ambitions_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(GameDir)\Big Ambitions_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(GameDir)\Big Ambitions_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(GameDir)\Big Ambitions_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(GameDir)\Big Ambitions_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- HGExtensions：提供 InstanceBehavior&lt;T&gt; 泛型基类（GameManager 等继承它） -->
+    <Reference Include="HGExtensions">
+      <HintPath>$(GameDir)\Big Ambitions_Data\Managed\HGExtensions.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
